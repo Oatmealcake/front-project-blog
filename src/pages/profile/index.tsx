@@ -1,7 +1,7 @@
-import Footer from '../../components/Footer';
-import Header from '../../components/Haeder';
-import PostList from '../../components/PostList';
-import Profile from '../../components/Profile';
+import Footer from 'components/Footer';
+import Header from 'components/Haeder';
+import PostList from 'components/PostList';
+import Profile from 'components/Profile';
 
 export default function ProfilePage() {
   return <>
