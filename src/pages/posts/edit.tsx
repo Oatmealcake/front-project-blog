@@ -1,4 +1,3 @@
-import Footer from 'components/Footer';
 import Header from 'components/Haeder';
 import PostForm from 'components/PostForm';
 
