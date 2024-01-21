@@ -22,7 +22,6 @@ export default function LoginForm() {
       navigate("/");
     } catch (error: any) {
       toast.error(error?.code);
-      console.log(error);
     }
   }
 
