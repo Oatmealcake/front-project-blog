@@ -12,7 +12,7 @@ export default function PostDetail() {
   const params = useParams();
   const navigate = useNavigate();
 
-  const getPosts = async(id: string) => {
+  const getPost = async(id: string) => {
     if(id) {
       const docRef = doc(db, 'posts', id);
       const docSnap = await getDoc(docRef);
@@ -31,7 +31,7 @@ export default function PostDetail() {
   }
 
   useEffect(() => {
-    if(params?.id) getPosts(params?.id);
+    if(params?.id) getPost(params?.id);
   }, [params?.id]);
 
   return <>
@@ -64,7 +64,7 @@ export default function PostDetail() {
               {post?.content}
             </div>
           </div>
-          <Comments post={post} />
+          <Comments post={post} getPost={getPost} />
         </>
       ) : <Loader />}
     </div>
